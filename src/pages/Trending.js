@@ -47,7 +47,7 @@ const Trend=({setMusicTracks, setTrackIndex,audiofunction, isPlaying, setIsPlayi
         <div className="trend">
             <div className="trend-area">
            
-            <div className='routes' ><h6 className='rts-rts'><Link className='rts-rts' to={'/'}>Home</Link> -- <Link className='rts-rts'>Trending</Link></h6></div>
+            <div className='routes' ><h6 className='rts-rts'><Link className='rts-rts' to={'/'}>Home</Link> --  <span className='rts-tag'>Trending</span></h6></div>
                 <section className="sec-1">
                 <div className="trendimg">
               <img src={tr_img1}  />

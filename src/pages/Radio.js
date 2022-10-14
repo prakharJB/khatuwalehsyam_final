@@ -40,12 +40,12 @@ const Radio = ({
 
   return (
 <div className="araeaaaa">
-<h6 className='radio-rts-rts'>You Are Now Listening to Shri KhatuShyam Non-Stop Radio</h6>
+<h6 className='radio-rts-rts'><p className="radio-abtpara">You Are Now Listening to Shri KhatuShyam Non-Stop Radio</p></h6>
       <div className="radio-img">
-          <img src={radioimg} />
+          <img src={radioimg}  className="radioimg-size"/>
           </div>
           <div className='trndbtn'>
-              <button className='footer-btn' 
+              <button className='footer-btn radiobtn' 
                onClick={() => {
                   const play = audiofunction();
                   if (play) {
