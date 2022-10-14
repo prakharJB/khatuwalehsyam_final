@@ -131,6 +131,8 @@ function App() {
                   setIsPlaying={setIsPlaying}
                   isPlaying={isPlaying} 
                   isPlay={isPlay}
+                  selectStyle = {selectStyle}
+                   setSelectStyle= {setSelectStyle}
                 />} />
           <Route path='/latestsong' element={<Latest />} />
           <Route
@@ -199,7 +201,10 @@ function App() {
           player={player}
           setIsPlaying={setIsPlaying}
           isPlaying={isPlaying}
-          setIsPlay={setIsPlay}/>
+          setIsPlay={setIsPlay}
+          selectStyle = {selectStyle}
+          setSelectStyle= {setSelectStyle}
+          />
        
           
       </Router>

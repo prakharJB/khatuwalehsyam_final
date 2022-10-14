@@ -6,17 +6,23 @@ import 'react-h5-audio-player/lib/styles.css';
 
 
 
-const Player = ({ musicTracks, trackIndex, setTrackIndex ,player ,audiofunction, isPlaying, setIsPlaying, setIsPlay}) => {
+const Player = ({ musicTracks, trackIndex, setTrackIndex ,player ,audiofunction, isPlaying, setIsPlaying, setIsPlay, selectStyle, setSelectStyle}) => {
 
   const  handleClickPrevious = () => {
     setTrackIndex((currentTrack) =>
       currentTrack === 0 ? musicTracks.length - 1 : currentTrack - 1
     );
+
   };
-  const handleClickNext = () => {
+
+  
+  const handleClickNext = async () => {
     setTrackIndex((currentTrack) =>
-      currentTrack < musicTracks.length - 1 ? currentTrack + 1 : 0
+      currentTrack < musicTracks.length - 1 ? currentTrack + 1 : 0 ,
+      
     );
+    
+   
   };
 
   const SwitchPause = () => {

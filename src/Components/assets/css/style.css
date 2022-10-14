@@ -344,7 +344,9 @@ img.slider-img.superhit-img{
     object-fit: cover;
     height: 133px;
 }
-
+p.artname {
+    font-weight: 200;
+}
 
 
 .songname p{
@@ -581,7 +583,7 @@ button.footer-btn.radiobtn {
     margin: 18px 0;
 }
 p.radio-abtpara{
-    font-weight: 600;
+   
     font-size: 18px;
 }
 /*  Recommends */
@@ -597,6 +599,7 @@ p.radio-abtpara{
     cursor: pointer;
     border-bottom: 1px solid #FB4607;
     width: 100%;
+    padding: 0 5px;
 }
 .row1:hover{
     box-shadow: 0 0px 8px grey;
@@ -1399,6 +1402,9 @@ h6.rts-rts{
         }
         p.recommend-song ,p.recommend-artist{
             font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+             white-space: nowrap;
         }
         .row-time{
             font-size: 14px;

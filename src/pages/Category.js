@@ -18,10 +18,11 @@ const Category = ({
   isPlaying,
   setIsPlaying,
   player,
-  isPlay
+  isPlay,
+  selectStyle, setSelectStyle
 }) => {
   const { pathname } = useLocation();
-  const [selectStyle, setSelectStyle] = useState();
+ 
   const navigate = useNavigate();
 
   useEffect(() => {
