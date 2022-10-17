@@ -35,6 +35,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
   }, []);
 
   const handleScroll = () => {
+    setSelectStyle(null);
     window.scrollTo({
       top: 0,
       left: 0,

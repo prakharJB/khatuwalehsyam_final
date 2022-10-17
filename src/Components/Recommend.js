@@ -5,7 +5,7 @@ import bgimg from '../Components/assets/images/play-bg.gif'
 
 
 
-const Recommend = ({ children ,setMusicTracks,setTrackIndex, isPlay}) => {
+const Recommend = ({ children ,setMusicTracks,setTrackIndex, isPlay,audiofunction}) => {
     const text = children;
     const [recommend, setRecommend] = React.useState([]);
     const [isReadMore, setIsReadMore] = useState(true);
@@ -41,7 +41,8 @@ useEffect(() => {
   const ChangeCurrentSong = (index) => {
     setTrackIndex(index);
     setMusicTracks(superData);
-    setSelectStyle(index)
+    setSelectStyle(index);
+    audiofunction();
   };
 
 

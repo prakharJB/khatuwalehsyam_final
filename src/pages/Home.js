@@ -18,7 +18,8 @@ const Home = ({
   setMusicTracks,
   selectStyle,
  setSelectStyle,
- isPlay
+ isPlay,
+ audiofunction
 
 }) => {
   const { pathname } = useLocation();
@@ -190,7 +191,7 @@ const Home = ({
         </Carousel>
         </div>
       </div>
-      <Recommend setMusicTracks={setMusicTracks} 
+      <Recommend setMusicTracks={setMusicTracks} audiofunction={audiofunction}
       setTrackIndex={ setTrackIndex} isPlay={isPlay}/>
 {/*  
       <div className="slider  ulhover">
