@@ -1183,6 +1183,18 @@ font-weight: 600!important;
 	100% { transform: translateX(calc(-250px * 7))}
 }
 
+
+/* Error css */
+img.error {
+    width: 100%;
+    max-width: 374px;
+}
+img.searchntfndsize {
+    width: 100%;
+    max-width: 560px;
+}
+
+
 /*Responsive */
 
 @media only screen  and (max-width : 991px){

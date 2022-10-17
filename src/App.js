@@ -16,7 +16,7 @@ import NewReleases from './pages/NewReleases';
 import SearchContent from './pages/search';
 import Radio from './pages/Radio';
 import AllSongs from './pages/Allsong';
-
+import  Pagenotfound from './pages/Pagenotfound';
 
 function App() {
   const [musicTracks, setMusicTracks] = useState([
@@ -186,8 +186,8 @@ function App() {
               setIsPlaying={setIsPlaying}
                 isPlaying={isPlaying} 
                 isPlay={isPlay}
-               />}
-                 />
+               />} />
+                <Route path="*" element={< Pagenotfound />} />
         </Routes>
         </div>
         <Footer  releaseSong={releaseSong}

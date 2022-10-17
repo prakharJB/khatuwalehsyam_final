@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import resultnotfnd from '../Components/assets/images/searchnot.png';
 
 const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
   const [search, setSearch] = useState([]);
@@ -41,7 +42,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
 
   return (
     <div className="seacharea">
-      <div className="Search-result"><h2> Searched result</h2></div>
+      <div className="Search-result"><h2> Searched Result</h2></div>
       {!emptyData ? (
     <div className='ul-song'>
       <ul className='card-area'>
@@ -55,7 +56,9 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
         ))}
       </ul>
     </div>
-      ) : (  <div>No Result Found </div>)}
+      ) : (  <div className="searchntfnd">
+        <img src={resultnotfnd} className="searchntfndsize" />
+              </div>)}
     </div>
   );
 };
