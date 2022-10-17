@@ -81,15 +81,15 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
       
                      </div>
                      <div className="form-inline my-2 my-lg-0 navbar-search">
-                    <input
-                      class="form-control mr-sm-2"
-                     type="search"
-                     placeholder="Search"
-                     aria-label="Search"
-                      onChange={(e) => setSearchValue(e.target.value)}
-                  />
-                    <button onClick={SearchSongs} className="searchbtn"><i class="fa fa-search" aria-hidden="true"></i><p className='searchfont'>Search</p></button>
-                     </div>
+                       <input className=" form-control mr-sm-2 "
+                      // class="form-control mr-sm-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                         onChange={(e) => setSearchValue(e.target.value)}
+                       />
+                        <button onClick={SearchSongs} className="searchbtn"><i class="fa fa-search" aria-hidden="true"></i><p className='searchfont'>Search</p></button>
+                      </div>
                   </div>
                     <Navbar.Toggle aria-controls='responsive-na' onClick={() => setExpanded(expanded ? false : "expanded")} />
                 <div className="menu">

@@ -355,6 +355,9 @@ p.artname {
     text-transform: capitalize;
     font-weight: 700;
     margin-top: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .ft-bnr{
     margin-bottom: 30px;
@@ -1393,7 +1396,11 @@ h6.rts-rts{
        
     }
     @media only screen and (max-width :512px){
-        
+        /* .search-box:active> .search-txt
+        {
+          width: 100%;
+          padding: 0 6px;
+        } */
         .artist{
             width: 35%;
         }
@@ -1483,5 +1490,4 @@ h6.rts-rts{
         }
        
     }
-
-
+   
