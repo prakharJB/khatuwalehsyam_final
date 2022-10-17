@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
   const [search, setSearch] = useState([]);
   const[superData, setSuperData]= useState();
+  const[emptyData, setEmptyData]= useState(false)
 
 
   const location = useLocation();
@@ -23,7 +24,10 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
           console.log('PARSED', parsedData);
           setSuperData(parsedData);
           setSearch(json);
-        });
+        }).catch(() => {
+          setEmptyData(true)
+        })
+
     }
   }, [location, location.state, setMusicTracks]);
   console.log('this is search', search);
@@ -38,6 +42,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
   return (
     <div className="seacharea">
       <div className="Search-result"><h2> Searched result</h2></div>
+      {!emptyData ? (
     <div className='ul-song'>
       <ul className='card-area'>
         {search?.map((user, index) => (
@@ -50,6 +55,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
         ))}
       </ul>
     </div>
+      ) : (  <div>No Result Found </div>)}
     </div>
   );
 };

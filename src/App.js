@@ -96,6 +96,7 @@ function App() {
                   setReleaseSong={setReleaseSong}
                   setMusicTracks={setMusicTracks} 
                   setCurrentArtist={setCurrentArtist}
+                  audiofunction={audiofunction}
                   selectStyle={selectStyle}
                   setSelectStyle={setSelectStyle}
                   isPlay={isPlay} />} />
