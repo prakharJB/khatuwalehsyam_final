@@ -94,6 +94,8 @@ img.slider-top-img:hover{
 }
 
 .searchbutton {
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
     position: absolute;
     font-size: 22px;
     width: 11%;
@@ -103,14 +105,16 @@ img.slider-top-img:hover{
 
 
 .search {
-   
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
     left: 49px; 
     background-color: white;
     outline: none;
     border: 1px solid #F06F41;
     padding: 10px;
     width: 100%;
- 
+   border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
     height: 100%;
     z-index: 10;
     transition-duration: 0.4s;
@@ -1431,7 +1435,8 @@ img.searchntfndsize {
         width: 100% !important; 
         margin: 0 !important;
         padding: 0 !important;
-        
+        border-bottom-right-radius: 0 ;
+        border-top-right-radius: 0;
         height: 75% !important;
     
     }
@@ -1450,7 +1455,8 @@ img.searchntfndsize {
         left: 49px !important; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
         background-color: white !important;
         outline: none !important;
-    
+        border-bottom-left-radius: 0 ;
+        border-top-left-radius: 0 ;
         padding: 0 !important;
         width: 0 !important;
         height: 75% !important;
