@@ -64,8 +64,8 @@ img.slider-top-img:hover{
     padding-left: 32px;
     width:0;
     padding-right: 32px;
-    height: 50px;
-    line-height: 50px;
+    height: 75%;
+    line-height: 41px;
     text-align: center;
     color: white;
     text-decoration: none;
@@ -115,7 +115,7 @@ img.slider-top-img:hover{
     width: 100%;
    border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
-    height: 100%;
+    height: 75%;
     z-index: 10;
     transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
@@ -1193,12 +1193,40 @@ font-weight: 600!important;
 img.error {
     width: 100%;
     max-width: 374px;
+  
 }
 img.searchntfndsize {
     width: 100%;
     max-width: 560px;
 }
-
+.Pagenotfound {
+    position: relative;
+}
+.goback{
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0
+}
+button.backhome {
+    padding: 8px;
+    border-radius: 28px;
+    border: none;
+    color: white;
+    background: #F94507;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.searchntfnd{
+    position: relative;
+}
+a.searchback {
+    position: absolute;
+    top: 60%;
+    left: 0;
+     bottom: 0;
+     right: 0;
+}
 
 /*Responsive */
 
@@ -1388,9 +1416,6 @@ img.searchntfndsize {
         font-size: 14px !important;
         padding-left: 32px !important;
         padding-right: 32px !important;
-        height: 50px !important;
-      
-        line-height: 40px !important;
         text-align: center!important;
         color: white !important;
         text-decoration: none !important;
@@ -1407,7 +1432,7 @@ img.searchntfndsize {
         -moz-transition-duration: 0.4s !important;
         -webkit-transition-duration: 0.4s !important;
         -o-transition-duration: 0.4s !important;
-        background-color: white !important;
+        background-color:white!important;
         color: black !important;
     }
     
@@ -1437,7 +1462,7 @@ img.searchntfndsize {
         padding: 0 !important;
         border-bottom-right-radius: 0 ;
         border-top-right-radius: 0;
-        height: 75% !important;
+
     
     }
     
@@ -1459,7 +1484,6 @@ img.searchntfndsize {
         border-top-left-radius: 0 ;
         padding: 0 !important;
         width: 0 !important;
-        height: 75% !important;
         z-index: 10 !important;
         transition-duration: 0.4s !important;
         -moz-transition-duration: 0.4s !important;

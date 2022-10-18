@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import resultnotfnd from '../Components/assets/images/searchnot.png';
+import {Link} from "react-router-dom";
 
 const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
   const [search, setSearch] = useState([]);
@@ -58,6 +59,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
     </div>
       ) : (  <div className="searchntfnd">
         <img src={resultnotfnd} className="searchntfndsize" />
+        <Link to="/" className="searchback"> <button className="backhome">Go to home</button></Link>
               </div>)}
     </div>
   );
