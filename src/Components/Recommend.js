@@ -68,7 +68,7 @@ return (
                 </div>
            </div>
          </div>    
-         <div className='about-slider1 recommend'>
+         <div className='about-slider1 recommend tophead'>
             {recommend.slice(0, visible).map((song ,index)=>(
  <div className="row1"  onClick={() => ChangeCurrentSong(index)}>
     <div className="row-area" >

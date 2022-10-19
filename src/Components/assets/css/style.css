@@ -1315,7 +1315,7 @@ a.searchback {
         width: 40%;
     }
     .topMargin{
-        margin-top: 166px;
+        margin-top: 144px;
     }
     .slider-heading {
         font-size: 18px;
@@ -1327,6 +1327,10 @@ a.searchback {
         padding: 0;
         margin-bottom: 7px;
      }
+     .about-slider1.recommend.tophead{
+        margin: 0;
+     }
+   
      p.text {
         font-size: 16px;
     }
@@ -1689,6 +1693,9 @@ a.searchback {
                 width: 250px !important; /* Bar width+1px */
                 padding: 0 16px 0 0;
             }
+            .row-area{
+                padding: 8px 0;
+             }
     
             }
     
