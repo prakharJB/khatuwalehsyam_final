@@ -21,7 +21,7 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
 
 
   useEffect(() => {
-    const url = `http://localhost:3100/playlist/songs/633c3487cca1438524d18e91`;
+    const url = `http://khatuwaleshyam.com:3100/playlist/songs/633c3487cca1438524d18e91`;
     fetch(url)
       .then((response) => response.json())
       .then((json) => {

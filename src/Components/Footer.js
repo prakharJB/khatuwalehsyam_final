@@ -21,21 +21,21 @@ const Footer = ({ setCurrentArtist , setTrackIndex, setMusicIndex, releaseSong})
    
 
     useEffect(() => {
-        const url = 'http://localhost:3100/category/songs';
+        const url = 'http://khatuwaleshyam.com:3100/category/songs';
         fetch(url)
           .then((response) => response.json())
           .then((json) => setCategory(json))
           .catch((error) => console.log(error));
       }, []);
       useEffect(() => {
-        const url = 'http://localhost:3100/playlist';
+        const url = 'http://khatuwaleshyam.com:3100/playlist';
         fetch(url)
           .then((response) => response.json())
           .then((json) => setPlaylist(json))
           .catch((error) => console.log(error));
       }, []);
       useEffect(() => {
-        const url = 'http://localhost:3100/artist';
+        const url = 'http://khatuwaleshyam.com:3100/artist';
         fetch(url)
           .then((response) => response.json())
           .then((json) => setArtist(json))
@@ -43,7 +43,7 @@ const Footer = ({ setCurrentArtist , setTrackIndex, setMusicIndex, releaseSong})
       }, []);
 
       useEffect(() => {
-        const url = 'http://localhost:3100/playlist/songs/633c3487cca1438524d18e91';
+        const url = 'http://khatuwaleshyam.com:3100/playlist/songs/633c3487cca1438524d18e91';
         fetch(url)
           .then((response) => response.json())
           .then((json) => setFameSongs(json))
@@ -84,11 +84,12 @@ const Footer = ({ setCurrentArtist , setTrackIndex, setMusicIndex, releaseSong})
 <div className='container-fluid first-foo-para'>
         <div className='top-footer-para'>
             <h2>Hare Ka Sahara Baba Shyam Hamara</h2>
+            <div className='para'>
             <p>Kathin rah bhi saral ho jayegi mushkilen
 sari hal ho jayegi ek bar aaja tu sharan
 shyam ke zindagi teri safal ho jayegi,
 Jay shree Shyam.
-</p>
+</p></div>
         </div>
         </div>
     <div className='container-fluid'>
@@ -113,6 +114,7 @@ Jay shree Shyam.
                 </ul>
         </div>
  <div className='footer-content'>
+  <div className='twocoloum'>
     <div className='footer-album'>
        <div className='footer-menu1'>
       <div className='album-area'>
@@ -143,6 +145,8 @@ Jay shree Shyam.
         </div>
      </div>
     </div>  
+    </div>
+    <div className='twocoloum'>
     <div className='footer-artist'>
      <div className='footer-menu3'>
         <h4 className='foo-heading'>artist</h4>
@@ -173,7 +177,8 @@ Jay shree Shyam.
             </div>
         </div>
 
-    </div>     
+    </div> 
+    </div>    
  </div>
  </div>
  <div className='bottom-footer'>

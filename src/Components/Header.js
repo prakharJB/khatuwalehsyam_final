@@ -45,7 +45,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
  
 
   useEffect(() => {
-    const url = 'http://localhost:3100/artist/songs';
+    const url = 'http://khatuwaleshyam.com:3100/artist/songs';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setArtist(json))
@@ -69,7 +69,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
 <div className="container-fluid">
      <div className="navigation">
           <Navbar expand="lg" expanded={expanded} className="navbar navbar-expand-lg navbar-light bg-light">
-              <Container>
+         
                <div className="header-left">
                  <div className="headre-area"> 
                      <div className="logo-n-toggle">
@@ -159,7 +159,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
                   </Navbar.Collapse>
                   </div>
                   </div>
-              </Container>
+            
           </Navbar>
      </div>
 </div>

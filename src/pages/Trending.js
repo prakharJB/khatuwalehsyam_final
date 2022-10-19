@@ -21,7 +21,7 @@ const Trend=({setMusicTracks, setTrackIndex,audiofunction, isPlaying, setIsPlayi
 
   
     useEffect(() => {
-        const url = 'http://localhost:3100/trending';
+        const url = 'http://khatuwaleshyam.com:3100/trending';
         fetch(url)
           .then((response) => response.json())
           .then((json) => {

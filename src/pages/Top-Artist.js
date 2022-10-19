@@ -66,7 +66,7 @@ const Artist=({releaseSong,
           navigate('/')
           
         } 
-        const url = `http://localhost:3100/artist/songs/${currentArtist?._id}`;
+        const url = `http://khatuwaleshyam.com:3100/artist/songs/${currentArtist?._id}`;
         fetch(url)
           .then((response) => response.json())
           .then((json) => {

@@ -106,7 +106,7 @@ const Home = ({
 
 
   useEffect(() => {
-    const url = 'http://localhost:3100/artist';
+    const url = 'http://khatuwaleshyam.com:3100/artist';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setData(json))
@@ -114,21 +114,21 @@ const Home = ({
   }, []);
 
   useEffect(() => {
-    const url = 'http://localhost:3100/category/songs';
+    const url = 'http://khatuwaleshyam.com:3100/category/songs';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setCategory(json))
       .catch((error) => console.log(error));
   }, []);
   useEffect(() => {
-    const url = 'http://localhost:3100/playlist';
+    const url = 'http://khatuwaleshyam.com:3100/playlist';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setPlaylist(json))
       .catch((error) => console.log(error));
   }, []);
   useEffect(() => {
-    const url = 'http://localhost:3100/trending';
+    const url = 'http://khatuwaleshyam.com:3100/trending';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setTrendingSong(json))
