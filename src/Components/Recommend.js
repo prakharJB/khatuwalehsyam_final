@@ -47,7 +47,7 @@ useEffect(() => {
 
 
 return (
-	<div className="container">
+	<div className="conatiner-fluid">
 	<h2>
 		
         <div className="slider  ulhover">

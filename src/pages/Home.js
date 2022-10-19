@@ -193,55 +193,7 @@ const Home = ({
       </div>
       <Recommend setMusicTracks={setMusicTracks} audiofunction={audiofunction}
       setTrackIndex={ setTrackIndex} isPlay={isPlay}/>
-{/*  
-      <div className="slider  ulhover">
-        {' '}
-       
-         <div className='slider1'>
-           <div className="heading-area">
-              <div className="rightheading-area">
-              <h2 className='slider-heading'>Khatuwaleshyam Recommends</h2>
-              </div>
-              <div className="leftheading-area">
-                <h5 className='see-head'>see all</h5>
-                </div>
-           </div>
-         </div>    
-         <div className='about-slider1 recommend'>
-              <div className="row1">
-               <div className="row-area">
-                <div className="recommend-no">01</div>
-                  <div className="row-image">
-                  <Link to='/'>   <img src={row1}  className="roimg"></img></Link>
-                  </div>
-                   <div className="row-content">
-                    <p className="recommend-song">Haare Ke Sahare Aaja</p>
-                    <p className="recommend-artist">sanjay mittal</p>
-                    </div>
-                    </div>
-              </div>
-              <div className="row1">
-                <div className="row-area">
-                   <div className="recommend-no">02</div>
-                  <div className="row-image"> <Link to='/'>   <img src={row2} className="roimg" ></img></Link></div>
-                  <div className="row-content">
-                   <p className="recommend-song">Haara Hu Baba</p>
-                   <p className="recommend-artist">kanhaiya mittal</p>
-                  </div>
-                  </div>
-               </div> 
-               <div className="row1">
-               <div className="row-area">
-               <div className="recommend-no">03</div>
-                   <div className="row-image"> <Link to='/'>   <img src={row3} className="roimg" ></img></Link></div>
-                   <div className="row-content">
-                   <p className="recommend-song">Pakad Lo Hath Banwari Ka</p>
-                    <p className="recommend-artist">upasna mehta</p>
-                    </div>
-                    </div>
-               </div> 
-         </div>
-      </div> */}
+
       <div className="slider  ulhover">
         {' '}
        

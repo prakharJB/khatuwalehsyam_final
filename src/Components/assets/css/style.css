@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 /* header css*/
 .navigation{
     box-shadow: 0px 15px 10px -15px #11111147;
@@ -31,7 +30,7 @@
 }
 .headre-area{
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
  
 }
 .navbar{
@@ -263,7 +262,7 @@ ul{
 
 .home{
     width: 100%;
-    max-width: 1505px;
+    /* max-width: 1505px; */
 }
 li.blocks-gallery-item.wdt {
     margin-right: 10px;
@@ -793,6 +792,8 @@ button.rhap_button-clear.rhap_main-controls-button.rhap_play-pause-button path{
     cursor: pointer;
     width: 100%;
     border-radius: 3px;
+    height: 100%;
+    min-height: 40px;
 }
 .trend-area{
     margin: 0 auto;
@@ -1245,19 +1246,22 @@ a.searchback {
     }
     button.navbar-toggler.collapsed{
         position: absolute;
-        top: 70px;
+        top: 65px;
         right: 12px;
         font-size: 16px;
     }
     .navbar-toggler{
         border: none;
-        top: 82px;
+        top: 65px;
         right: 12px;
         font-size: 16px;
         position: absolute;
     }
+    .navbar-expand-lg .navbar-collapse{
+        padding-top: 0;
+    }
     .navbar-nav{
-        padding: 12px;
+        padding: 4px 0;
     }
     .navbar-nav li{
         padding: 6px;
@@ -1387,6 +1391,7 @@ a.searchback {
     .upcomingarea{
         align-items: center;
         flex-direction: column-reverse;
+        padding-left: 0;
     }
     .event-right {
         width: 100%;
@@ -1497,7 +1502,7 @@ a.searchback {
     }
     
     .expandright {
-        
+    
         right: 49px !important; /* Button width-1px */
     }
     
@@ -1514,6 +1519,9 @@ a.searchback {
             }
             .trendimg img{
                 max-width: 300px;
+            }
+            h6.rts-rts{
+                text-align: center;
             }
             .trnd-img-about h1{
                 margin-bottom: 5px;
@@ -1697,4 +1705,4 @@ a.searchback {
                 padding: 0 16px 0 0;
             }
         }
-    
+        
