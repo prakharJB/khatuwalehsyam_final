@@ -43,6 +43,7 @@ const AllSongs = ({ setMusicTracks, setTrackIndex ,audiofunction, isPlaying, set
     setTrackIndex(index);
     console.log('this is song index---->', index);
     setIsPlaying(false);
+    audiofunction();
   };
   
   return (

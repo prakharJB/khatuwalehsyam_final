@@ -51,6 +51,7 @@ const TopPlaylist = ({
     setTrackIndex(index);
     console.log('this is song index---->', index);
     setIsPlaying(false);
+    audiofunction();
   };
 
   const SetIndexToZero = (index) => {

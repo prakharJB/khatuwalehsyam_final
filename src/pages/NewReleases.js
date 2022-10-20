@@ -44,6 +44,7 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
    setSelectStyle(index)
     console.log('this is song index---->', index);
     setIsPlaying(false);
+    audiofunction();
   };
   return (
     <div className='trend'>
@@ -88,7 +89,7 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
                     <p className='heading'>Track</p>
                   </div>
                   <div className='artist'>
-                    <p className='heading'>Artist</p>
+                    <p className='heading artist-head'>Artist</p>
                   </div>
                 </div>
               </li>

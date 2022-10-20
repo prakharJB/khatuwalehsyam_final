@@ -58,6 +58,7 @@ const Category = ({
     setSelectStyle(index);
     console.log('this is song index---->', index);
     setIsPlaying(false);
+    audiofunction()
   };
 
   return (

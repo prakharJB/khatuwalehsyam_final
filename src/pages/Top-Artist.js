@@ -88,6 +88,7 @@ const Artist=({releaseSong,
         setMusicTracks(superData);
         setSelectStyle(index)
         setTrackIndex(index);
+        audiofunction();
       };
     
 

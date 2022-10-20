@@ -1261,6 +1261,9 @@ a.searchback {
         font-size: 16px;
         position: absolute;
     }
+    .navbar-toggler-icon{
+        height: 1.9em;
+    }
     .navbar-expand-lg .navbar-collapse{
         padding-top: 0;
     }
@@ -1275,6 +1278,7 @@ a.searchback {
         width: auto;
         
     }
+ 
     button.searchbtn{
         padding: 10px 12px;
     }
@@ -1333,6 +1337,7 @@ a.searchback {
         font-size: 18px;
         padding: 0;
         margin-bottom: 7px;
+       
      }
      .about-slider1.recommend.tophead{
         margin: 0;
@@ -1520,6 +1525,12 @@ a.searchback {
     .expandright:focus {
         padding: 0 0 0 16px !important;
     }
+    .dropdown:hover .dropdown-menu{
+      display: none;
+    }
+    .dropdown-menu.show{
+        display: block !important;
+    }
     }
     
     
@@ -1703,7 +1714,9 @@ a.searchback {
             .row-area{
                 padding: 8px 0;
              }
-    
+             h6.rts-rts{
+                display: none;
+             }
             }
     
        
