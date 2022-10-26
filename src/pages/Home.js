@@ -77,27 +77,42 @@ const Home = ({
   const [data, setData] = React.useState([]);
   const [category, setCategory] = React.useState([]);
   const [playlist, setPlaylist] = React.useState([]);
-  
+  const [isLoading, setIsLoading] = React.useState(true);
   
   
 
 
   useEffect(() => {
+
+    if (data.length !== 0) {
+      setIsLoading(false);
+    }
     const url = 'https://khatuwaleshyam.com:3100/artist';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.log(error));
-  }, []);
+  }, [data]);
+
+ 
+
 
   useEffect(() => {
+    if (category.length !== 0) {
+      setIsLoading(false);
+    }
     const url = 'https://khatuwaleshyam.com:3100/category/songs';
     fetch(url)
       .then((response) => response.json())
       .then((json) => setCategory(json))
       .catch((error) => console.log(error));
   }, []);
+
+  
   useEffect(() => {
+    if (playlist.length !== 0) {
+      setIsLoading(false);
+    }
     const url = 'https://khatuwaleshyam.com:3100/playlist';
     fetch(url)
       .then((response) => response.json())
@@ -105,6 +120,9 @@ const Home = ({
       .catch((error) => console.log(error));
   }, []);
   useEffect(() => {
+    if (trendingSong.length !== 0) {
+      setIsLoading(false);
+    }
     const url = 'https://khatuwaleshyam.com:3100/trending';
     fetch(url)
       .then((response) => response.json())
@@ -151,6 +169,10 @@ const Home = ({
      
          <div className='ft-bnr'>
         {' '}
+
+        {isLoading ? (
+          <div className="loader"></div>
+        ) : (
         <Carousel
           responsive={responsive}
           infinite={true}
@@ -169,6 +191,7 @@ const Home = ({
         ))}
          
         </Carousel>
+        )}
         </div>
       </div>
       <Recommend setMusicTracks={setMusicTracks} audiofunction={audiofunction}
@@ -224,6 +247,9 @@ const Home = ({
               <h2 className='slider-heading'>Top Searched Artists</h2>
           </div>    
           <div className='about-slider1 Searched'>
+          {isLoading ? (
+            <div className="loader"></div>
+          ) : (
                 <Carousel responsive={responsiveTwo} infinite={true}>
                     {data.map((user) => (
                      <div className='slick-slide'  onClick={() => {
@@ -243,6 +269,7 @@ const Home = ({
              ))}
 
               </Carousel>
+          )}
       </div>
       <div className="slider  ulhover">
          <div className='slider1'>
