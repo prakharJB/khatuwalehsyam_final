@@ -1,8 +1,5 @@
 import React,{useState, useEffect}  from "react";
 import radioimg from '../Components/assets/images/radioimg.png'
-import { Link } from 'react-router-dom';
-import {useNavigate} from 'react-router-dom'
-import { useLocation } from 'react-router-dom';
 
 const Radio = ({
   
@@ -10,7 +7,6 @@ const Radio = ({
     audiofunction,
     setPlaylist, isPlaying, setIsPlaying, 
   }) =>{
-    const [allSong, setAllSong] = React.useState([]);
     const [radio, setRadio] = React.useState([]);
     
     

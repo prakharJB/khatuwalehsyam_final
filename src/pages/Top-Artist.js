@@ -4,7 +4,6 @@ import 'react-multi-carousel/lib/styles.css';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import bgimg from '../Components/assets/images/play-bg.gif'
-import tr_img1 from '../Components/assets/images/trending1.png';
 
 
 
@@ -12,11 +11,9 @@ import tr_img1 from '../Components/assets/images/trending1.png';
 const Artist=({releaseSong,
     currentArtist,
     setMusicTracks,
-    setDefaultMusic,
     setTrackIndex,
     audiofunction , isPlaying, setIsPlaying, selectStyle, setSelectStyle, isPlay})=>{
-    const [release, setRelease] = React.useState([]);
-    const { pathname } = useLocation();
+   
 
 
 
@@ -61,8 +58,7 @@ const Artist=({releaseSong,
       };
       useEffect(() => {
         if (currentArtist === null || undefined) {
-          // setDisplaySongs(releaseSong);
-          // setDefaultMusic();
+        
           navigate('/')
           
         } 
@@ -71,11 +67,11 @@ const Artist=({releaseSong,
           .then((response) => response.json())
           .then((json) => {
             setDisplaySongs(json);
-            console.log('CONSOLE', json);
+            // console.log('CONSOLE', json);
             const parsedDataTwo = json.map((item) => {
               return { src: item.song, name: item.track, id: item._id };
             });
-            console.log('PARSED', parsedDataTwo);
+            // console.log('PARSED', parsedDataTwo);
            setSuperData(parsedDataTwo)
             setDisplaySongs(json);
           })

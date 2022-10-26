@@ -59,7 +59,6 @@ return (
               </div>
               <div className="leftheading-area">
                 <h5 className='see-head'><p className="text">
-	{/* {isReadMore ? text.slice(0, 150) : text} */}
 	    <span onClick={toggleReadMore} className="read-or-hide">
 		{isReadMore ? "see all" : " see less"}
 	    </span>
@@ -71,7 +70,6 @@ return (
             {recommend.slice(0, visible).map((song ,index)=>(
  <div className="row1"  onClick={() => ChangeCurrentSong(index)}>
     <div className="row-area" >
-       {/* <div className="recommend-no">01</div> */}
          <div className="row-image">
            <Link to='/'>   <img src={selectStyle=== index && isPlay === true ? bgimg: song.image}  className="roimg"></img></Link>
          </div>

@@ -1,16 +1,11 @@
-
-
-
-import React,{useState,useEffect} from 'react'
-import Container from 'react-bootstrap/Container';
+import React,{useState,useEffect} from 'react';
 import { Navbar, Nav} from "react-bootstrap";
 import { NavLink } from 'react-router-dom';
- import logo from "./assets/images/finallogo.png";
- import toggel from "./assets/images/toggel.png";
- import { Link } from "react-router-dom";
- import { useNavigate } from 'react-router-dom'
- import { useLocation } from 'react-router-dom';
-//  import toggel from "./assets/images/toggel.png";
+import logo from "./assets/images/finallogo.png";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+
 
 const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
   setSelectStyle}) => {
@@ -53,7 +48,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
   }, []);
 
   const MoveToTopArtist = (user) => {
-    console.log('navigating artist', user);
+    // console.log('navigating artist', user);
     setCurrentArtist(user);
     setSelectStyle(null);
     navigate('/Top-Artist');
@@ -81,13 +76,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
                     </div>
       
                      </div>
-                     {/* <div class="search-container">
-             <form action="/search" method="get">
-                <input class="search expandright" id="searchright" type="text" name="q" placeholder="Search"  onChange={(e) => setSearchValue(e.target.value)} />
-          <label onClick={SearchSongs} class="button searchbutton" for="searchright"><span class="mglass ">&#9906;</span></label>
-            {/* <button  className="searchbtn"><i class="fa fa-search" aria-hidden="true"></i><p className="searchfont">Search</p></button> */}
-              {/* </form> */}
-                 {/* </div> */} 
+                    
                  <div className="form-inline my-2 my-lg-0 navbar-search">
                     <input
                       class="form-control mr-sm-2"

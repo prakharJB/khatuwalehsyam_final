@@ -7,7 +7,7 @@ import './Components/assets/css/style.css'
 import Home from './pages/Home';
 import Trend from './pages/Trending';
 import Artist from './pages/Top-Artist';
-import TopBhajan from './pages/Top10-Bhajan';
+
 import Player from './Components/Player';
 import Latest from './pages/latest';
 import Category from './pages/Category';
@@ -123,7 +123,7 @@ function App() {
                   setSelectStyle={setSelectStyle}
                   isPlay={isPlay} />} />
 
-          <Route path='/TopBhajan' element={<TopBhajan  />} />
+        
           <Route path='/Category' element={<Category currentArtist={currentArtist}
                   setTrackIndex={setTrackIndex}
                   fetchSongs={fetchSongs}

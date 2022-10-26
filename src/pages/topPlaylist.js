@@ -7,9 +7,7 @@ import bgimg from '../Components/assets/images/play-bg.gif'
 const TopPlaylist = ({
   setMusicTracks,
   setTrackIndex,
-  user,
   currentArtist,
-  fetchSongs,
   audiofunction, isPlaying, setIsPlaying, isPlay ,selectStyle, setSelectStyle
  
 }) => {
@@ -17,7 +15,7 @@ const TopPlaylist = ({
   const[superData, setSuperData]= useState()
   const [playlist, setPlaylist] = useState([]);
   const navigate = useNavigate();
-  const { pathname } = useLocation();
+
  
   
   
@@ -31,11 +29,11 @@ const TopPlaylist = ({
       .then((response) => response.json())
       .then((json) => {
         setPlaylist(json);
-        console.log('CONSOLE', json);
+        // console.log('CONSOLE', json);
         const parsedDataTwo = json.map((item) => {
           return { src: item.song, name: item.track, id: item._id };
         });
-        console.log('PARSED', parsedDataTwo);
+        // console.log('PARSED', parsedDataTwo);
         setSuperData(parsedDataTwo);
        
       })
@@ -55,7 +53,7 @@ const TopPlaylist = ({
 
   const SetIndexToZero = (index) => {
     setTrackIndex(0);
-    console.log('this is current index', index);
+    // console.log('this is current index', index);
   };
 
   useEffect(() => {

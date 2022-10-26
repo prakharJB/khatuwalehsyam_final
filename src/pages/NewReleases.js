@@ -7,7 +7,6 @@ import { useLocation } from 'react-router-dom'
 
 const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,isPlay, setIsPlaying ,selectStyle,
   setSelectStyle}) => {
-    const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,7 +15,6 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
 
   const [release, setRelease] = React.useState([]);
 
-  //const[superData, setSuperData]= useState()
   
 
 
@@ -26,11 +24,11 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
       .then((response) => response.json())
       .then((json) => {
         setRelease(json);
-        console.log('CONSOLE', json);
+        // console.log('CONSOLE', json);
         const parsedDatasix = json.map((item) => {
           return { src: item.song, name: item.track, id: item._id };
         });
-        console.log('PARSED', parsedDatasix);
+        // console.log('PARSED', parsedDatasix);
         
         setMusicTracks(parsedDatasix);
         setRelease(json);
@@ -42,7 +40,7 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
   const ChangeCurrentSong = (index) => {
     setTrackIndex(index);
    setSelectStyle(index)
-    console.log('this is song index---->', index);
+    // console.log('this is song index---->', index);
     setIsPlaying(false);
     audiofunction();
   };
@@ -134,85 +132,12 @@ const NewReleases = ({ setMusicTracks, setTrackIndex ,audiofunction , isPlaying,
                     </div>
                   </div>
                 </li>
-                {/* <li className='songabt-img'>
-                  <Link to='' className='anchor-foo'>
-                    <p className='hearticon'>
-                      <i class='fa fa-heart-o' aria-hidden='true'></i>
-                    </p>
-                  </Link>
-                </li> */}
-                {/* <li className='songabt-img'>
-                  <Link to='' className='anchor-foo'>
-                    <p className='moreoption'>
-                      <i class='fa fa-ellipsis-v' aria-hidden='true'></i>
-                    </p>
-                  </Link>
-                </li> */}
+              
                 <li className='row-item'>
                   <p>{user.duration}</p>
                 </li>
               </ul>
             ))}
-            {/* <ul  className="song-about">
-                <li className="songabt-img">
-                    <div className="listimg">
-                    <a href="" ><img src={tr_img4}  /></a>
-                    <div className="playyicon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> </div>
-                    </div>
-                </li>
-                <li className="songabt">
-                    <div className="heading-row">
-                        <div className="track"><p>Summer High</p></div>
-                        <div className="artist"><p>AP Dhillon</p></div>
-                    </div>
-                </li>
-                <li className="songabt-img"><Link to='' className='anchor-foo'><p className="hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></p></Link></li>
-                <li className="songabt-img"><Link to='' className='anchor-foo'><p className="moreoption"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></p></Link></li>
-                <li className="row-item">
-                <p>04:28</p>
-                </li>
-                    
-              </ul> */}
-            {/* <ul  className="song-about">
-                <li className="songabt-img">
-                    <div className="listimg">
-                    <a href="" ><img src={tr_img2}  /></a>
-                    <div className="playyicon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> </div>
-                    </div>
-                </li>
-                <li className="songabt">
-                    <div className="heading-row">
-                        <div className="track"><p>I Wish I Could Hate You</p></div>
-                        <div className="artist"><p>HRVY</p></div>
-                    </div>
-                </li>
-                <li className="songabt-img"><Link to='' className='anchor-foo'><p className="hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></p></Link></li>
-                <li className="songabt-img"><Link to='' className='anchor-foo'><p className="moreoption"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></p></Link></li>
-                <li className="row-item">
-                <p>04:28</p>
-                </li>
-                    
-              </ul> */}
-            {/* <ul  className="song-about">
-                <li className="songabt-img">
-                    <div className="listimg">
-                    <a href="" ><img src={tr_img3}  /></a>
-                    <div className="playyicon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> </div>
-                    </div>
-                </li>
-                <li className="songabt">
-                    <div className="heading-row">
-                        <div className="track"><p>Mitti De Tibbe</p></div>
-                        <div className="artist"><p>Kaka</p></div>
-                    </div>
-                </li>
-                <li className="songabt-img"><Link to='' className='anchor-foo'><p className="hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></p></Link></li>
-                <li className="songabt-img"><Link to='' className='anchor-foo'><p className="moreoption"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></p></Link></li>
-                <li className="row-item">
-                <p>04:28</p>
-                </li>
-                    
-              </ul> */}
           </div>
         </section>
       </div>

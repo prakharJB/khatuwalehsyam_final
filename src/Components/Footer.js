@@ -53,18 +53,18 @@ const Footer = ({ setCurrentArtist , setTrackIndex, setMusicIndex, releaseSong})
 
 
       const navigateToTopArtist = (user) => {
-        console.log('USER THIS', user);
+        // console.log('USER THIS', user);
         setCurrentArtist(user);
         navigate('/Top-Artist');
       };
       const MoveToPlaylist = (user) => {
-        console.log(' THIS user', user);
+        // console.log(' THIS user', user);
         setCurrentArtist(user);
         navigate('/TopPlaylist');
       };
 
       const CategorySelect = (user) => {
-        console.log('ths is user', user);
+        // console.log('ths is user', user);
         setCurrentArtist(user);
         navigate('/category');
       };

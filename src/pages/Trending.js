@@ -28,7 +28,7 @@ const Trend=({setMusicTracks, setTrackIndex,audiofunction, isPlaying, setIsPlayi
             const parsedData = json.map((item) => {
               return { src: item.song, name: item.track, id: item._id };
             });
-            console.log('PARSED', parsedData);
+            // console.log('PARSED', parsedData);
             setMusicTracks(parsedData)
             setTrending(json);
           })
@@ -38,7 +38,7 @@ const Trend=({setMusicTracks, setTrackIndex,audiofunction, isPlaying, setIsPlayi
      
         setSelectStyle(index)
         setTrackIndex(index);
-        console.log('this is song index---->', index);
+        // console.log('this is song index---->', index);
         setIsPlaying(false);
         audiofunction();
        

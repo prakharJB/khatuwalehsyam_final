@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import release1 from '../Components/assets/images/releasehead.png';
+import release1 from '../Components/assets/images/All bhajans.png';
 import bgimg from '../Components/assets/images/play-bg.gif'
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
@@ -29,7 +29,7 @@ const AllSongs = ({ setMusicTracks, setTrackIndex ,audiofunction, isPlaying, set
         const parsedDataThree = json.map((item) => {
           return { src: item.song, name: item.track, id: item._id };
         });
-        console.log('PARSED', parsedDataThree);
+        // console.log('PARSED', parsedDataThree);
         setSuperData(parsedDataThree)
         setSongs(json);
       })
@@ -41,7 +41,7 @@ const AllSongs = ({ setMusicTracks, setTrackIndex ,audiofunction, isPlaying, set
     setMusicTracks(superData);
     setSelectStyle(index)
     setTrackIndex(index);
-    console.log('this is song index---->', index);
+    // console.log('this is song index---->', index);
     setIsPlaying(false);
     audiofunction();
   };

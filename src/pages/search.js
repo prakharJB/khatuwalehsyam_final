@@ -10,7 +10,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
 
 
   const location = useLocation();
-  console.log(location.state);
+  // console.log(location.state);
 
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
           const parsedData = json.map((item) => {
             return { src: item.song, name: item.track, id: item._id };
           });
-          console.log('PARSED', parsedData);
+          // console.log('PARSED', parsedData);
           setSuperData(parsedData);
           setSearch(json);
         }).catch(() => {
@@ -32,12 +32,12 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
 
     }
   }, [location, location.state, setMusicTracks]);
-  console.log('this is search', search);
+  // console.log('this is search', search);
 
   const ChangeCurrentSong = (index) => {
     setTrackIndex(index);
     setMusicTracks(superData);
-    console.log('this is song index---->', index);
+    // console.log('this is song index---->', index);
   };
  
 

@@ -4,16 +4,13 @@ import Carousel from 'react-multi-carousel';
 import { Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
-//  import  event from '../Components/assets/images/eventback.png';
- import  eventright  from '../Components/assets/images/eventright.png';
- import Recommend from '../Components/Recommend';
+import  eventright  from '../Components/assets/images/eventright.png';
+import Recommend from '../Components/Recommend';
  
 
 const Home = ({
   releaseSong,
-  setReleaseSong,
   setCurrentArtist,
-  fetchSongs,
   setTrackIndex,
   setMusicTracks,
   selectStyle,
@@ -75,28 +72,8 @@ const Home = ({
           items: 2,
         },
       };
-      // const responsiveThree = {
-      //   superLargeDesktop: {
-      //     // the naming can be any, depends on you.
-      //     breakpoint: { max: 4000, min: 3000 },
-      //     items: 5,
-      //   },
-      //   desktop: {
-      //     breakpoint: { max: 3000, min: 1024 },
-      //     items: 3,
-      //   },
-      //   tablet: {
-      //     breakpoint: { max: 1024, min: 464 },
-      //     items: 2,
-      //   },
       
-      //   mobile: {
-      //     breakpoint: { max: 464, min: 0 },
-      //     items: 2,
-      //   },
-      // };
       const [trendingSong, setTrendingSong] = React.useState([]);
-      const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState([]);
   const [category, setCategory] = React.useState([]);
   const [playlist, setPlaylist] = React.useState([]);
@@ -139,17 +116,17 @@ const Home = ({
     navigate('/Trending');
     setTrackIndex(index);
     setSelectStyle(index)
-    console.log('ths is user');
+    // console.log('ths is user');
   };
   const navigateToTopArtist = (user) => {
-    console.log('USER THIS', user);
+    // console.log('USER THIS', user);
     setCurrentArtist(user);
     navigate('/Top-Artist');
   };
 
 
   const CategorySelect = (user) => {
-    console.log('ths is user', user);
+    // console.log('ths is user', user);
     setCurrentArtist(user);
     navigate('/category');
   };
@@ -159,7 +136,7 @@ const Home = ({
     navigate('/newReleases');
   };
   const MoveToPlaylist = (user) => {
-    console.log(' THIS user', user);
+    // console.log(' THIS user', user);
     setCurrentArtist(user);
     navigate('/TopPlaylist');
   };
@@ -233,7 +210,6 @@ const Home = ({
                     <div className="playyiconhome"><i class="fa fa-play-circle-o" aria-hidden="true" onClick={() => MoveToPlaylist(user)}></i></div>
                </li>
             <div className="songname">
-            {/* <p>{user.title}</p> */}
           </div>
           </div>
             ))}
@@ -282,7 +258,6 @@ const Home = ({
     
              
             </li>
-            {/* <div className="playyicon"><i class="fa fa-play-circle" aria-hidden="true"></i> </div> */}
             <div className="songname">
             <p className="artsong">{user.track}</p>
             <p className="artname">{user.artist}</p>
@@ -294,7 +269,6 @@ const Home = ({
           </div>
        </div>
       </div>
-    {/* </div> */}
     <div   className='upcomingEvents' >
      <div  className="upcomingarea" >
            <div className="event-left">

@@ -24,7 +24,6 @@ const Category = ({
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentArtist]);
-  const [release, setRelease] = React.useState([]);
   const [category, setCategory] = useState([]);
   const [superData, setSuperData] = useState();
 
@@ -37,11 +36,11 @@ const Category = ({
       .then((response) => response.json())
       .then((json) => {
         setCategory(json);
-        console.log('CONSOLE', json);
+        // console.log('CONSOLE', json);
         const parsedDataTwo = json.map((item) => {
           return { src: item.song, name: item.track, id: item._id };
         });
-        console.log('PARSED', parsedDataTwo);
+        // console.log('PARSED', parsedDataTwo);
         setSuperData(parsedDataTwo);
       })
 
@@ -52,7 +51,7 @@ const Category = ({
     setTrackIndex(index);
     setMusicTracks(superData);
     setSelectStyle(index);
-    console.log('this is song index---->', index);
+    // console.log('this is song index---->', index);
     setIsPlaying(false);
     audiofunction()
   };
@@ -66,7 +65,7 @@ const Category = ({
               Home
             </Link>{' '}
             -- <Link className='rts-rts'>Category</Link>--{' '}
-            <span className='rts-tag'>{currentArtist.title}</span>
+            <span className='rts-tag'>{currentArtist?.title}</span>
           </h6>
         </div>
         <section className='sec-1'>
@@ -142,7 +141,7 @@ const Category = ({
                     />
 
                     <div className='playyicon'>
-                      <i class='fa fa-play-circle-o' aria-hidden='true'></i>{' '}
+                      <i className='fa fa-play-circle-o' aria-hidden='true'></i>{' '}
                     </div>
                   </div>
                 </li>
