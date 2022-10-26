@@ -63,6 +63,10 @@ const Footer = ({ setCurrentArtist , setTrackIndex, setMusicIndex, releaseSong})
         navigate('/TopPlaylist');
       };
 
+      const navigateTojmbliss = () => {
+        window.location.href = 'https://jmbliss.com'; 
+      }
+
       const CategorySelect = (user) => {
         // console.log('ths is user', user);
         setCurrentArtist(user);
@@ -182,7 +186,7 @@ Jay shree Shyam.
  </div>
  </div>
  <div className='bottom-footer'>
-    <p className='bottom-footer-para'> © 2022 Jmbliss IT Solutions</p>
+    <p className='bottom-footer-para' onClick={navigateTojmbliss}> © 2022 Jmbliss IT Solutions</p>
  </div>
  </div>
 </div> 

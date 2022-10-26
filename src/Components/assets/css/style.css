@@ -590,6 +590,7 @@ li.about-para2.right-border{
     text-align: center;
     font-size: 18px;
     font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
 }
 .face{
     background-color: #6179AC;

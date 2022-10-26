@@ -122,6 +122,7 @@ const Home = ({
     // console.log('USER THIS', user);
     setCurrentArtist(user);
     navigate('/Top-Artist');
+    setSelectStyle(null);
   };
 
 
@@ -129,6 +130,7 @@ const Home = ({
     // console.log('ths is user', user);
     setCurrentArtist(user);
     navigate('/category');
+    setSelectStyle(null)
   };
   const navigateToNewRelease = (index) => {
     setSelectStyle(index)
@@ -139,6 +141,7 @@ const Home = ({
     // console.log(' THIS user', user);
     setCurrentArtist(user);
     navigate('/TopPlaylist');
+    setSelectStyle(null);
   };
  
 
