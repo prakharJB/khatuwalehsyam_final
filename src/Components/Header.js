@@ -83,7 +83,7 @@ const Menu = ({ setCurrentArtist, searchAPI ,  selectStyle,
                      type="search"
                      placeholder="Search"
                      aria-label="Search"
-                      onChange={(e) => setSearchValue(e.target.value)}
+                      onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
                   />
                     <button onClick={SearchSongs} className="searchbtn"><i class="fa fa-search" aria-hidden="true"></i><p className='searchfont'>Search</p></button>
                      </div>
