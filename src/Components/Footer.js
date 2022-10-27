@@ -64,8 +64,18 @@ const Footer = ({ setCurrentArtist , setTrackIndex, setMusicIndex, releaseSong})
       };
 
       const navigateTojmbliss = () => {
-        window.location.href = 'https://jmbliss.com'; 
+        window.open('https://jmbliss.com');
       }
+
+      const navigateliveInsta=()=>{
+        window.open('https://www.instagram.com/')
+      }
+
+      const navigateliveFacebook=()=>{
+          window.open('https://www.facebook.com/');
+      }
+
+     
 
       const CategorySelect = (user) => {
         // console.log('ths is user', user);
@@ -101,10 +111,10 @@ Jay shree Shyam.
         <div className='footer-awsfnts'>
           <div className='connectus'><p>Connect with us</p></div>
            <div className='footer-awsfnts-area'>
-        <Link to='' className='anchor-foo'><button className='foot-btn-icon face'> <i className="fa fa-facebook" aria-hidden="true"></i></button></Link>
-        <Link to='' className='anchor-foo'><button className='foot-btn-icon insta'><i className="fa fa-instagram" aria-hidden="true"></i></button></Link>
-        <Link to='' className='anchor-foo'><button className='foot-btn-icon twitter'><i className="fa fa-twitter" aria-hidden="true"></i></button></Link>
-        <Link to='' className='anchor-foo'> <button className='foot-btn-icon youtube'><i className="fa fa-youtube-play" aria-hidden="true"></i></button></Link>
+        <Link to='' className='anchor-foo'><button className='foot-btn-icon face' onClick={navigateliveFacebook}> <i className="fa fa-facebook" aria-hidden="true"></i></button></Link>
+        <Link to='' className='anchor-foo'><button className='foot-btn-icon insta' onClick={navigateliveInsta}><i className="fa fa-instagram" aria-hidden="true"></i></button></Link>
+        <Link to='' className='anchor-foo'><button className='foot-btn-icon twitter' ><i className="fa fa-twitter" aria-hidden="true"></i></button></Link>
+        <Link to='' className='anchor-foo'> <button className='foot-btn-icon youtube' ><i className="fa fa-youtube-play" aria-hidden="true"></i></button></Link>
            </div>
         </div>
         <div className='footer-para'>

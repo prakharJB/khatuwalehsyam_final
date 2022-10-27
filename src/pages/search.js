@@ -26,6 +26,7 @@ const SearchContent = ({ setMusicTracks, setTrackIndex }) => {
           // console.log('PARSED', parsedData);
           setSuperData(parsedData);
           setSearch(json);
+          setEmptyData(false)
         }).catch(() => {
           setEmptyData(true)
         })

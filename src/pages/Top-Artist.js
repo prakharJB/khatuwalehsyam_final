@@ -111,14 +111,11 @@ const Artist=({releaseSong,
 
                              <div className="trndbtn">
                                  <button className="footer-btn" onClick={() => {
-                              const play = audiofunction();
-                                     if (play) {
-                                  setIsPlaying(false);
-                                          } else {
-                                        setIsPlaying(true);
-                                          }
+                              setMusicTracks(superData);
+                              setTrackIndex(0);
+                              setSelectStyle(0);
                                           }}>
-                                         {isPlaying === true ? 'Play' : 'Pause'}</button>
+                                        Play</button>
              
                                </div>
                    </div>
